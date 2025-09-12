@@ -1,7 +1,7 @@
 from Imports import *
 
 # Game Design
- 
+
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Flappython')     
 
