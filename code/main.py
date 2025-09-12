@@ -68,11 +68,11 @@ while True:
 
     #! Obsatacle movement    
 
-        # linear Change
+        #todo linear Change
             pos -= DIFFICULTY
             pos_1 -= DIFFICULTY
 
-        # Loop Function
+        #todo Loop Function
 
             if pos <= -100:
                 pos = 1200
@@ -92,14 +92,14 @@ while True:
 
     #! Rectangles
 
-        # Obstacle Rectangles
+        #* Obstacle Rectangles
      
-          # Frame 1
+          #todo Frame 1
 
             rect_obs = obstacle.get_frect(center = (pos ,pos1))
             rect_obs1 = obstacle1.get_frect(center = (pos, pos2)) 
 
-          # Frame 2 
+          #todo Frame 2 
 
             rect_ob1s = obstacl1e.get_frect(center = (pos_1 ,pos1_))
             rect_obs11 = obstacl1e1.get_frect(center = (pos_1, pos2_))
@@ -117,11 +117,11 @@ while True:
 
         #* Draw Obstacle
 
-          #* Frame 1
+          #todo Frame 1
             screen.blit(obstacle, rect_obs)
             screen.blit(obstacle1, rect_obs1)  
          
-          #* Frame 2
+          #todo Frame 2
 
             screen.blit(obstacl1e, rect_ob1s)
             screen.blit(obstacl1e1, rect_obs11)  
