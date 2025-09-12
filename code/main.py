@@ -1,18 +1,18 @@
 from Imports import *
 
-# Game Design
+#* Game Design
 
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Flappython')     
 
 
-# Game loop
+#? Game loop
 
 while True:
      
-     # Event loop
+     #todo Event loop
 
-     # Quit Game Function
+     #todo Quit Game Function
 
      for event in pygame.event.get():
          
@@ -28,29 +28,29 @@ while True:
                 exit()  
 
 
-       # Player Jump function      
+       #todo Player Jump function      
 
          if event.type == pygame.KEYDOWN:
              if event.key == pygame.K_SPACE:
                  GRAVITY  = -10 
                  jump.play()
 
-       # Reset function          
+       #todo Reset function          
 
              if event.key == pygame.K_SPACE: RUNNING = True   
  
-# Game Functionality  
+#? Game Functionality  
 
      if RUNNING:
             
-    # Player Movement
+    #! Player Movement
      
             Y += GRAVITY
             rect = player.get_rect(center = (X,Y))
             GRAVITY += 1 
             rect.y += GRAVITY 
 
-    # Backround Movement
+    #! Backround Movement
 
             XSKY -=  SKY_SPEED
             X1SKY -= SKY_SPEED
@@ -66,7 +66,7 @@ while True:
             if X1GROUND <= -1000:
                 X1GROUND =1000    
 
-    # Obsatacle movement    
+    #! Obsatacle movement    
 
         # linear Change
             pos -= DIFFICULTY
@@ -83,14 +83,14 @@ while True:
                 pos1_ = randint(X_1, Y_1)
                 pos2_ = randint(X_2,Y_2)
 
-    # Score            
+    #! Score            
 
             if rect.x >= pos or rect.x >= pos_1:
                 SCORE += 1  
                 point.play()
             Score = test.render(f'{SCORE}', False, (64,64,64))
 
-    # Rectangles
+    #! Rectangles
 
         # Obstacle Rectangles
      
@@ -104,38 +104,38 @@ while True:
             rect_ob1s = obstacl1e.get_frect(center = (pos_1 ,pos1_))
             rect_obs11 = obstacl1e1.get_frect(center = (pos_1, pos2_))
 
-    # Drawing the Game
+    #! Drawing the Game
 
-        # Draw Sky
+        #todo Draw Sky
 
             screen.blit(sky1,(X1SKY,Y1SKY))    
             screen.blit(sky, (XSKY, YSKY))  
            
-        # Draw Player   
+        #todo Draw Player   
 
             screen.blit(player,rect)
 
-        # Draw Obstacle
+        #* Draw Obstacle
 
-          # Frame 1
+          #* Frame 1
             screen.blit(obstacle, rect_obs)
             screen.blit(obstacle1, rect_obs1)  
          
-          # Frame 2
+          #* Frame 2
 
             screen.blit(obstacl1e, rect_ob1s)
             screen.blit(obstacl1e1, rect_obs11)  
             
-        # Draw Groud    
+        #todo Draw Ground    
 
             screen.blit(ground1,(X1GROUND,Y1GROUND))
             screen.blit(ground, (XGROUND , YGROUND)) 
 
-        # Draw Score
+        #todo Draw Score
 
             screen.blit(Score,(500,10)) 
 
-        # Collision detection
+        #! Collision detection
            
             if rect.centerx == pos:
                         
@@ -224,7 +224,7 @@ while True:
                             RUNNING = False              
                                                         
 
-    # Death Screen
+    #! Death Screen
 
             if rect.bottom >= 750 :
                             death.play()
@@ -273,7 +273,7 @@ while True:
                             RUNNING = False           
                         
                     
-    # Update Game
+    #! Update Game
 
      pygame.display.update()
      clock.tick(60)
