@@ -137,7 +137,7 @@ while True:
 
         #! Collision detection
            
-            if rect.right == pos:
+            if rect.centerx == pos:
                         
                         if rect.bottom >= pos2:
 
@@ -180,7 +180,7 @@ while True:
                             RUNNING = False         
                                                       
 
-            if rect.right == pos_1 :
+            if rect.centerx == pos_1 :
                         
                         if rect.bottom >= pos2_: 
 
