@@ -55,3 +55,8 @@ player = pygame.transform.scale(player,(100,200))
 # Font
 
 test = pygame.font.Font(join('graphics', 'Pixeltype.ttf'), 60)
+
+# Coin
+
+coin = pygame.image.load(join('Egg.png'))
+

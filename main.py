@@ -42,6 +42,7 @@ while True:
 #? Game Functionality  
 
      if RUNNING:
+
             
     #! Player Movement
      
@@ -136,6 +137,7 @@ while True:
             screen.blit(Score,(500,10)) 
 
         #! Collision detection
+            screen.blit(coin,(0,0)) 
            
             if rect.centerx == pos:
                         
